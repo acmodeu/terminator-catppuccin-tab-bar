@@ -1,0 +1,60 @@
+/* Define colors as variables */
+@define-color my-black #24273a;
+@define-color my-grey-light #8087a2;
+@define-color my-grey-dark #5b6078;
+@define-color my-white #cad3f5;
+@define-color my-green #a6da95;
+@define-color my-red #ed8796;
+
+.terminator-terminal-window notebook header {
+    background-color: @my-black;
+}
+
+.terminator-terminal-window notebook > header.top button {
+    margin-right: 10px;
+    font-size: 10px;
+    background-color: @my-white;
+    border: 1px solid @my-grey-light;
+}
+
+/*close button colors in the checked tab*/
+.terminator-terminal-window notebook > header.top tabs > tab:checked button {
+    background-color: @my-black;
+    color: @my-white;
+    border: 1px solid @my-grey-light;
+}
+
+/*close button colors on hover*/
+.terminator-terminal-window notebook > header.top tabs > tab button:hover {
+    background-color: @my-black;
+    color: @my-red;
+    border: 1px solid @my-grey-light;
+}
+
+.terminator-terminal-window notebook > header.top > tabs > tab {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    box-shadow: none;
+    background-color: @my-grey-dark;
+    border: 1px solid @my-grey-light;
+    border-top-left-radius: 5px; /* Round upper left corner */
+    border-top-right-radius: 5px; /* Round upper right corner */
+
+}
+
+.terminator-terminal-window notebook > header.top > tabs > tab:checked {
+    background-color: @my-green;
+}
+
+.terminator-terminal-window notebook > header.top > tabs > tab label {
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    color: @my-white;
+    font-size: 13px;
+    font-family: "MesloLGS NF";
+}
+
+.terminator-terminal-window notebook > header.top > tabs > tab:checked label {
+    color: @my-black;
+    font-weight: bold;
+}
