@@ -6,13 +6,18 @@
 @define-color my-green #a6da95;
 @define-color my-red #ed8796;
 
+.terminator-terminal-window notebook {
+    border: none;
+}
+
 .terminator-terminal-window notebook header {
     background-color: @my-black;
+    border: none;
 }
 
 .terminator-terminal-window notebook > header.top button {
     margin-right: 10px;
-    font-size: 10px;
+    font-size: 10;
     background-color: @my-white;
     border: 1px solid @my-grey-light;
 }
@@ -39,7 +44,6 @@
     border: 1px solid @my-grey-light;
     border-top-left-radius: 5px; /* Round upper left corner */
     border-top-right-radius: 5px; /* Round upper right corner */
-
 }
 
 .terminator-terminal-window notebook > header.top > tabs > tab:checked {
@@ -50,11 +54,18 @@
     padding: 0 0 0 0;
     margin: 0 0 0 0;
     color: @my-white;
-    font-size: 13px;
-    font-family: "MesloLGS NF";
+    font-size: 13;
+    font-family: "MesloLGS NF", system-ui;
 }
 
 .terminator-terminal-window notebook > header.top > tabs > tab:checked label {
     color: @my-black;
     font-weight: bold;
+}
+
+/* Remove focus outline */
+.terminator-terminal-window notebook > header.top > tabs > tab:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
 }

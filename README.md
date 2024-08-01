@@ -14,3 +14,7 @@ after:
 ![after](after.png)
 
 Just drop `gtk.css` into `~/.config/gtk-3.0/` and reopen all terminator instances.
+
+**20230801 update**
+
+- Remove unnecessary transparent borders around tabbed window and tab bar.
